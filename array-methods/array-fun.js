@@ -7,9 +7,11 @@
  * filter, todas las arañas que al menos tienen dicho nivel de venominia.
  */
  function filterByVenom(spiders, venominia) {
-    return spiders.filter()
+    return spiders.filter(
+        spider => spider.venominia >= venominia
+    )
 }
-
+console.log(filterByVenom(spiders, 100));
 module.exports = {
     filterByVenom
 }
