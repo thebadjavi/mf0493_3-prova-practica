@@ -34,7 +34,7 @@
                     <label :id="todo.id" class="list-item" @dblclick="toggleCompleted(todo.id)"
                         :class="{'list-item__hide': mustHideTask(todo.done, todo.text)}">
                         <div class="list-item__container">
-                            <span :class="{ 'list-item__done': todo.done}">{{ todo.text }}</span>
+                            <span style="text-transform: uppercase"   :class="{ 'list-item__done': todo.done}">{{ todo.text }}</span>
                         </div>
                         <span @click="removeItem(todo.id)" class="button button-text">Remove</span>
                     </label>
@@ -45,7 +45,10 @@
                 <button class="button">Submit</button>
             </form>
         </div>
-        <!-- Apartado 2-->
+        <!-- Apartado 2 -->
+        <div class="container" v-if="todos.length === 0">
+            <p class="empty">No hay na</p>
+        </div>
 
     </div>
 
